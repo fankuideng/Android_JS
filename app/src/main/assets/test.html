@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1>这不是一个jsBridge</h1>
+    <script type="text/javascript">
+
+         function setToken(token){
+            f_android.setToken("JS-setToken-"+token);
+         }
+
+         function getToken(){
+            var msg = f_android.getToken();
+            alert("JS-getToken-"+msg)
+         }
+
+         function btnNext(btnNext){
+            alert(btnNext)
+            f_android.showBtnNext("JS-btnNext-"+btnNext);
+         }
+
+    </script>
+</head>
+<body>
+<!--789就是要传递给Android端的值-->
+<button value="点击" onclick="setToken('789')"></button>
+
+<button value="点击" onclick="getToken()"></button>
+</body>
+</html>
